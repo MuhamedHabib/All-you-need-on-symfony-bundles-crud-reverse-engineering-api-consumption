@@ -1,0 +1,49 @@
+{{ form_start(form,{attr:{'id':'form'}}) }}
+    {{ form_start(form,{attr:{'id':'form'}}) }}
+     
+    <div class="container">
+        <div class="form-group">
+            {{ form_label(form.Nom,"Nom:") }}
+
+            {{ form_widget(form.Nom, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.Prenom,"Prenom:") }}
+
+            {{ form_widget(form.Prenom, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.Adresse,"Adresse:") }}
+
+            {{ form_widget(form.Adresse, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.Sexe,"Sexe:") }}
+
+            {{ form_widget(form.Sexe, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.Age,"Age:") }}
+
+            {{ form_widget(form.Age, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.DescriptionSymptomes,"Description Symptomes:") }}
+
+            {{ form_widget(form.DescriptionSymptomes, {attr: {class:'form-control'}}) }}
+        </div>
+
+
+    </div>
+    
+    </div>
+    <div class="card-footer">
+    
+        <button class="btn">{{ button_label|default('Save') }}</button>
+        
+        </div>
+
+        
+        
+        {{ form_end(form) }}
+        

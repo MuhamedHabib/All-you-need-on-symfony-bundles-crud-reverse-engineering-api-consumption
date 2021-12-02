@@ -1,0 +1,52 @@
+
+{# ************************************************************************************* #}
+{% block title %}Contact{% endblock %}
+{% block contenu %}
+    <div class="container">
+        <div class="au-card recent-report">
+            <div class="au-card-inner">
+                <section class="dashboard-counts section-padding">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h3 class="breadcrumb">
+                                    <i class="fa fa-plus-square"></i>  Contactez-nous
+                                </h3>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        {{ form_start(emailForm, {'method': 'post','attr': {'class': 'contact'}}) }}
+                                        <div class="form-group">
+                                            <label>Nom: </label>
+                                            {{ form_widget(emailForm.name, {'attr': {'class':'form-control ', 'placeholder': 'Ecrivez votre nom!','required' : 'true'}}) }}
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>email : </label>
+                                            {{ form_widget(emailForm.email , {'attr': {'class':'form-control ', 'placeholder': 'entrez un email valide..','required' : 'true'}}) }}
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Message: </label>
+                                            {{ form_widget(emailForm.message , {'attr': {'class':'form-control', 'placeholder': 'Ecrivez votre demande ici ..','required' : 'true'}}) }}
+                                        </div>
+
+
+
+                                        <button class="btn btn-danger float-right"  type="submit">Envoyer</button>
+                                        <br/><br/>
+                                        {{ form_end(emailForm) }}
+                                        {#{{ include('formation/_form.html.twig') }}#}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
+{% endblock contenu %}

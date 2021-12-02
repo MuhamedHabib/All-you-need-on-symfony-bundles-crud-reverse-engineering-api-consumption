@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Questions{% endblock %}
+
+
+{% block body %}
+
+   
+   <p style="text-align:center;"> <strong>Veuillez vérifier toutes les déclarations ci-dessous qui s'appliquent à vous.</strong></p>
+    <p style="text-align:center;"><strong>Choisissez une réponse dans chaque rangée.<strong></p>
+ 
+
+
+    {{ include('questions/_form.html.twig') }}
+        <button  href="{{ path('salutation') }}" class="btn btn-secondary py-3 px-4">Retour</button>
+
+    
+    
+{% endblock %}

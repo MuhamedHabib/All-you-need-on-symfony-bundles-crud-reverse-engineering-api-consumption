@@ -1,0 +1,13 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}Edit Questionss{% endblock %}
+
+{% block body %}
+    <h1>Edit Questionss</h1>
+
+    {{ include('questions/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('questions_index') }}">back to list</a>
+
+    {{ include('questions/_delete_form.html.twig') }}
+{% endblock %}

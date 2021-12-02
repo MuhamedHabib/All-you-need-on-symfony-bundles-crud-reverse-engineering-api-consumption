@@ -1,0 +1,62 @@
+{{ form_start(form,{attr:{'id':'form'}}) }}
+    {{ form_start(form,{attr:{'id':'form'}}) }}
+    
+      <div class="container">
+        <div class="form-group">
+            
+            <label style="color: blue" for="Question1"><b>Je suis postménopausée</b></label>
+
+            {{ form_widget(form.Question1, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+           
+            <label  style="color: blue" for="Question2"><b>Je suis en surpoids ou obèse:</b></label>
+
+            {{ form_widget(form.Question2, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+        <label  style="color: blue" for="Question3"><b>Je fume des cigarettes
+
+:</b></label>
+           
+
+            {{ form_widget(form.Question3, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+        <label   style="color: blue" for="Question4"><b>J'ai récemment été blessé:</b></label>
+           
+
+            {{ form_widget(form.Question4, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+        <label   style="color: blue" for="Question5"><b>J'ai un taux de cholestérol élevé:</b></label>
+            
+
+            {{ form_widget(form.Question5, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+         <label  style="color: blue" for="Question6"><b>J'ai de l'hypertension:</b></label>
+          
+
+            {{ form_widget(form.Question6, {attr: {class:'form-control'}}) }}
+        </div>
+         <div class="form-group">
+         <label   style="color: blue" for="Question7"><b>Je suis diabétique:</b></label>
+            
+
+            {{ form_widget(form.Question7, {attr: {class:'form-control'}}) }}
+            
+          
+        </div>
+         <button type="submit"  class="btn btn-secondary">{{ button_label|default('Save') }}</button>
+
+
+
+    </div>
+    
+    </div></section>
+   
+        
+    
+{{ form_end(form) }}
+

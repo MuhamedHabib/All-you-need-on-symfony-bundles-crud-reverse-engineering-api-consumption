@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SalutationController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+</style>
+
+<div class="example-wrapper" ng-class="{'has-footer': controls.showFooter, 'back': controls.directionBack}">
+    
+
+<div ng-class="question.settings.layout" class="split" >
+<section>
+
+<div class="screen-text-header">
+<div render-html="question.text">
+<h1 style="text-align: left;" class="ng-scope" ><Strong>Bonjour!</strong><h1>
+
+<p><i>Vous êtes sur le point d'effectuer un bilan de santé court (3 minutes), sûr et anonyme. Vos réponses seront soigneusement analysées et vous découvrirez les causes possibles de vos symptômes.</i></p>
+<p><a href="{{ path('form_new') }}" class="btn btn-secondary py-3 px-4">Retour</a><a href="{{ path('questions_new') }}" class="btn btn-secondary py-3 px-4">Next</a></p>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+
+{% endblock %}

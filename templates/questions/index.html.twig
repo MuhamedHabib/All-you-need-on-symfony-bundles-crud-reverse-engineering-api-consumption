@@ -1,0 +1,47 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}Questionss index{% endblock %}
+
+{% block body %}
+    <h1>Questionss index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Question1</th>
+                <th>Question2</th>
+                <th>Question3</th>
+                <th>Question4</th>
+                <th>Question5</th>
+                <th>Question6</th>
+                <th>Question7</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for questionss in questionsses %}
+            <tr>
+                <td>{{ questionss.id }}</td>
+                <td>{{ questionss.Question1 }}</td>
+                <td>{{ questionss.Question2 }}</td>
+                <td>{{ questionss.Question3 }}</td>
+                <td>{{ questionss.Question4 }}</td>
+                <td>{{ questionss.Question5 }}</td>
+                <td>{{ questionss.Question6 }}</td>
+                <td>{{ questionss.Question7 }}</td>
+                <td>
+                    <a href="{{ path('questions_show', {'id': questionss.id}) }}">show</a>
+                    <a href="{{ path('questions_edit', {'id': questionss.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('questions_new') }}">Create new</a>
+{% endblock %}

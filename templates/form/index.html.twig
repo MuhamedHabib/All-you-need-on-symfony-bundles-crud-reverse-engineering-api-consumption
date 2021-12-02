@@ -1,0 +1,59 @@
+{% extends 'back.html.twig' %}
+
+
+
+{% block title %}Formulaire index{% endblock %}
+
+{% block body %}
+    <h1>Formulaire index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Sexe</th>
+                <th>Age</th>
+                <th>DescriptionSymptomes</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for formulaire in formulaires %}
+            <tr>
+                <td>{{ formulaire.id }}</td>
+                <td>{{ formulaire.Nom }}</td>
+                <td>{{ formulaire.Prenom }}</td>
+                <td>{{ formulaire.Adresse }}</td>
+                <td>{{ formulaire.Sexe }}</td>
+                <td>{{ formulaire.Age }}</td>
+                <td>{{ formulaire.DescriptionSymptomes }}</td>
+                <td>
+                    <a href="{{ path('form_show', {'id': formulaire.id}) }}">show</a>
+                    <a href="{{ path('form_edit', {'id': formulaire.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('form_new') }}">Create new</a>
+
+
+
+    <div id="div_chart"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        {{ gc_draw(piechart, 'div_chart') }}
+    </script>
+
+
+
+{% endblock %}
